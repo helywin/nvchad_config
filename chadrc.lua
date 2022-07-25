@@ -9,23 +9,10 @@ M.ui = {
   theme = "onedark",
 }
 
-M.options = {
-  user = function ()
-  end
-}
-
-M.mappings = require("custom.mappings")
+-- M.mappings = require "custom.mappings"
 
 M.plugins = {
-  user = require("custom.plugins"),
-  override = {
-
-  },
-  options = {
-    lspconfig = {
-      -- setup_lspconf = "custom.plugins.lspconfig"
-    }
-  }
+  user = require "custom.plugins"
 }
 
 return M
