@@ -19,7 +19,9 @@ M.options = {
 M.plugins = {
   user = require "custom.plugins",
   override = {
-    ["kyazdani42/nvim-tree.lua"] = pluginConfs.nvimtree
+    ["kyazdani42/nvim-tree.lua"] = pluginConfs.nvimtree,
+    ["lewis6991/gitsigns.nvim"] = pluginConfs.gitsigns,
+    ["williamboman/mason"] = pluginConfs.mason
   }
 }
 

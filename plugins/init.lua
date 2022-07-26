@@ -5,6 +5,12 @@ return {
       require("custom.plugins.lspconfig")
     end
   },
+  -- ["jose-elias-alvarez/null-ls.nvim"] = {
+  --   after = "nvim-lspconfig",
+  --   config = function()
+  --     require("custom.conf.null-ls")
+  --   end,
+  -- },
   -- ["olimorris/onedarkpro.nvim"] = {
   --   config = function ()
   --     require("custom.conf.onedarkpro")
@@ -108,5 +114,5 @@ return {
     config = function()
       require("custom.conf.nvim-cursorline")
     end
-  }
+  },
 }
