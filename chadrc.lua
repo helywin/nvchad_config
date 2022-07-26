@@ -10,6 +10,10 @@ M.ui = {
   theme = "onedark",
 }
 
+M.options = {
+  user = function()
+  end,
+}
 -- M.mappings = require "custom.mappings"
 
 M.plugins = {
@@ -18,5 +22,6 @@ M.plugins = {
     ["kyazdani42/nvim-tree.lua"] = pluginConfs.nvimtree
   }
 }
+
 
 return M

@@ -14,21 +14,25 @@ end
 vim.cmd("autocmd insertleave * silent! call fcitxtoggleinput()")
 -- 启动vim时关闭小企鹅输入法，不然每次都要切换一下
 vim.cmd("autocmd vimenter * silent! call fcitxtoggleinput()")
-vim.g.vsnip_snippet_dir = "~/.config/nvim/snippet"
+-- vim.g.vsnip_snippet_dir = "~/.config/nvim/snippet"
 --function _g.dump(...)
 --    local objects = vim.tbl_map(vim.inspect, {...})
 --    print(unpack(objects))
 --end
 
-vim.filetype.add({
-  pattern = {
-    ["*.launch"] = "launch"
-  }
-})
+-- vim.filetype.add({
+--   pattern = {
+--     ["*.launch"] = "launch"
+--   }
+-- })
 
-if vim.fn.has("linux") then
-  vim.g.python3_host_prog = os.getenv("home") .. '/anaconda3/bin/python3'
-end
+-- if vim.fn.has("linux") then
+--   vim.g.python3_host_prog = os.getenv("home") .. '/anaconda3/bin/python3'
+-- end
+
+-- vim.cmd("set tabstop=4")
+-- vim.cmd("set shiftwidth=4")
+-- vim.cmd("set softtabstop=4")
 
 local opt = vim.opt
 local g = vim.g
@@ -98,46 +102,18 @@ opt.expandtab = true
 -- 设置自动换行
 opt.wrap = true
 -- 开启跨行退格
-opt.backspace = "indent,eol,start"
+opt.backspace="indent,eol,start"
 -- 设置一行最多100字符
 opt.tw = 100
 --opt.colorcolumn = 100
 
--- opt.guifont = "caskaydiacove nerd font mono:h12"
+opt.guifont = "CaskaydiaCove Nerd Font Mono:h12"
 opt.cursorline = true
 -- cursorline
 opt.cul = true
 opt.title = true
-opt.shortmess:append "si"
+opt.shortmess:append "sI"
 opt.signcolumn = "yes"
 opt.splitbelow = true
 opt.undofile = true
 opt.whichwrap:append "<>[]hl"
--- leader键设置为空格
-g.mapleader = " "
-
--- 禁用一些内置的vim插件
-local default_plugins = {
-  "2html_plugin",
-  "getscript",
-  "getscriptplugin",
-  "gzip",
-  "logipat",
-  "netrw",
-  "netrwplugin",
-  "netrwsettings",
-  "netrwfilehandlers",
-  "matchit",
-  "tar",
-  "tarplugin",
-  "rrhelper",
-  "spellfile_plugin",
-  "vimball",
-  "vimballplugin",
-  "zip",
-  "zipplugin",
-}
-
-for _, plugin in pairs(default_plugins) do
-  g["loaded_" .. plugin] = 1
-end
