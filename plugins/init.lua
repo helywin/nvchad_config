@@ -1,5 +1,4 @@
 return {
-  -- ["nvim-lua/plenary.nvim"] = {},
   ["neovim/nvim-lspconfig"] = {
     config = function ()
       require("plugins.configs.lspconfig")
@@ -42,6 +41,7 @@ return {
     end
   },
   ["folke/lua-dev.nvim"] = {
+    after = "nvim-lspconfig",
     config = function ()
       require("custom.conf.lua-dev")
     end
@@ -61,6 +61,24 @@ return {
       require("custom.conf.dressing")
     end
   },
+  ["sindrets/diffview.nvim"] = {
+    requires = {
+      "nvim-lua/plenary.nvim"
+    },
+    after = "plenary.nvim",
+    cmd = {
+      'DiffviewOpen',
+      'DiffviewFileHistory',
+      'DiffviewClose',
+      'DiffviewToggleFiles',
+      'DiffviewFocusFiles',
+      'DiffviewRefresh'
+    },
+    config = function ()
+      require("custom.conf.diffview")
+    end
+
+  },
   ["kdheepak/lazygit.nvim"] = {
     requires = {
       "nvim-lua/plenary.nvim"
@@ -76,14 +94,6 @@ return {
   },
   ["vim-scripts/DoxygenToolkit.vim"] = {
     ft = "cpp"
-  },
-  ["sindrets/diffview.nvim"] = {
-    requires = {
-      "nvim-lua/plenary.nvim"
-    },
-    config = function ()
-      require("custom.conf.diffview")
-    end
   },
   ["aperezdc/vim-template"] = {
     config = function ()

@@ -1,13 +1,13 @@
 -- 自动切换输入法（fcitx框架）
 
 vim.g.fcitxtoggleinput = function()
-    -- linux下面i模式切换到n模式关闭输入法
-    if vim.fn.has("linux") then
-        local input_status = tonumber(vim.fn.system("fcitx-remote"))
-        if input_status == 2 then
-            vim.fn.system("fcitx-remote -c")
-        end
+  -- linux下面i模式切换到n模式关闭输入法
+  if vim.fn.has("linux") then
+    local input_status = tonumber(vim.fn.system("fcitx-remote"))
+    if input_status == 2 then
+      vim.fn.system("fcitx-remote -c")
     end
+  end
 end
 
 -- 退出插入模式时禁用小企鹅输入法
@@ -21,13 +21,13 @@ vim.g.vsnip_snippet_dir = "~/.config/nvim/snippet"
 --end
 
 vim.filetype.add({
-    pattern = {
-        ["*.launch"] = "launch"
-    }
+  pattern = {
+    ["*.launch"] = "launch"
+  }
 })
 
 if vim.fn.has("linux") then
-    vim.g.python3_host_prog = os.getenv("home")..'/anaconda3/bin/python3'
+  vim.g.python3_host_prog = os.getenv("home") .. '/anaconda3/bin/python3'
 end
 
 local opt = vim.opt
@@ -98,7 +98,7 @@ opt.expandtab = true
 -- 设置自动换行
 opt.wrap = true
 -- 开启跨行退格
-opt.backspace="indent,eol,start"
+opt.backspace = "indent,eol,start"
 -- 设置一行最多100字符
 opt.tw = 100
 --opt.colorcolumn = 100
@@ -118,27 +118,26 @@ g.mapleader = " "
 
 -- 禁用一些内置的vim插件
 local default_plugins = {
-   "2html_plugin",
-   "getscript",
-   "getscriptplugin",
-   "gzip",
-   "logipat",
-   "netrw",
-   "netrwplugin",
-   "netrwsettings",
-   "netrwfilehandlers",
-   "matchit",
-   "tar",
-   "tarplugin",
-   "rrhelper",
-   "spellfile_plugin",
-   "vimball",
-   "vimballplugin",
-   "zip",
-   "zipplugin",
+  "2html_plugin",
+  "getscript",
+  "getscriptplugin",
+  "gzip",
+  "logipat",
+  "netrw",
+  "netrwplugin",
+  "netrwsettings",
+  "netrwfilehandlers",
+  "matchit",
+  "tar",
+  "tarplugin",
+  "rrhelper",
+  "spellfile_plugin",
+  "vimball",
+  "vimballplugin",
+  "zip",
+  "zipplugin",
 }
 
 for _, plugin in pairs(default_plugins) do
-   g["loaded_" .. plugin] = 1
+  g["loaded_" .. plugin] = 1
 end
-
