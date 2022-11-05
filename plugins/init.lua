@@ -46,7 +46,7 @@ return {
       require("custom.conf.lspsaga")
     end
   },
-  ["folke/lua-dev.nvim"] = {
+  ["folke/neodev.nvim"] = {
     after = "nvim-lspconfig",
     config = function ()
       require("custom.conf.lua-dev")
