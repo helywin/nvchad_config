@@ -16,6 +16,9 @@ return {
   --     require("custom.conf.onedarkpro")
   --   end
   -- },
+  ["folke/which-key.nvim"] = {
+    disable = false,
+  },
   ["kevinhwang91/nvim-hlslens"] = {
     config = function ()
       require("custom.conf.nvim-hlslens")
@@ -114,5 +117,7 @@ return {
     config = function()
       require("custom.conf.nvim-cursorline")
     end
+  },
+  ["gpanders/editorconfig.nvim"] = {
   },
 }
