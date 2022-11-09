@@ -52,7 +52,7 @@ return {
   ["folke/neodev.nvim"] = {
     after = "nvim-lspconfig",
     config = function ()
-      require("custom.conf.lua-dev")
+      require("custom.conf.neodev")
     end
   },
   ["ray-x/lsp_signature.nvim"] = {
