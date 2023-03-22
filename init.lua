@@ -1,3 +1,11 @@
+-- local autocmd = vim.api.nvim_create_autocmd
+
+-- Auto resize panes when resizing nvim window
+-- autocmd("VimResized", {
+--   pattern = "*",
+--   command = "tabdo wincmd =",
+-- })
+--
 -- 自动切换输入法（fcitx框架）
 
 vim.g.fcitxtoggleinput = function()
@@ -14,25 +22,6 @@ end
 vim.cmd("autocmd insertleave * silent! call fcitxtoggleinput()")
 -- 启动vim时关闭小企鹅输入法，不然每次都要切换一下
 vim.cmd("autocmd vimenter * silent! call fcitxtoggleinput()")
--- vim.g.vsnip_snippet_dir = "~/.config/nvim/snippet"
---function _g.dump(...)
---    local objects = vim.tbl_map(vim.inspect, {...})
---    print(unpack(objects))
---end
-
--- vim.filetype.add({
---   pattern = {
---     ["*.launch"] = "launch"
---   }
--- })
-
--- if vim.fn.has("linux") then
---   vim.g.python3_host_prog = os.getenv("home") .. '/anaconda3/bin/python3'
--- end
-
--- vim.cmd("set tabstop=4")
--- vim.cmd("set shiftwidth=4")
--- vim.cmd("set softtabstop=4")
 
 local opt = vim.opt
 local g = vim.g
