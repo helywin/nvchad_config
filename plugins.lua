@@ -169,7 +169,15 @@ local plugins = {
   {
    "gpanders/editorconfig.nvim",
   },
-
+  {
+    "lambdalisue/suda.vim",
+    config = function ()
+      require("custom.configs.suda")
+    end
+  },
+  {
+    "github/copilot.vim"
+  }
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
