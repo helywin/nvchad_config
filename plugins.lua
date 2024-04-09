@@ -176,7 +176,11 @@ local plugins = {
     end
   },
   {
-    "github/copilot.vim"
+    "github/copilot.vim",
+    lazy = false,
+    config = function ()
+      
+    end
   }
   -- To make a plugin not be loaded
   -- {

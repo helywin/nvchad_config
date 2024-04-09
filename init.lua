@@ -106,3 +106,4 @@ opt.signcolumn = "yes"
 opt.splitbelow = true
 opt.undofile = true
 opt.whichwrap:append "<>[]hl"
+vim.o.exrc = true
